@@ -1,20 +1,11 @@
 import { loremIpsum } from "react-lorem-ipsum";
 
 export default function RightSide() {
-  const style={
-    backgroundColor: "#f7fafc",
-    color: "#1a202c",
-    fontFamily: "sans-serif",
-    padding: "1rem",
-    margin: "1rem",
-    borderRadius: "0.5rem",
-    border: "2px solid #edf2f7",
-    boxShadow: "0 5px 10px rgba(0, 0, 0, 0.12)",
-  }
+  
   return (
     <div className="text-wrapper">
       {loremIpsum({ p: 3 }).map((text,index) => (
-      <div className="text" key={index} style={style}>
+      <div className="p-4 m-4 rounded-lg border border-zinc-500 dark:text-zinc-400 dark:bg-zinc-800 shadow-zinc-300 dark:shadow-zinc-600" key={index}>
         {text}
       </div>
     ))}
