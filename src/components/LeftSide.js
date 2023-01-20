@@ -33,7 +33,7 @@ export default function LeftSide() {
             href="https://www.linkedin.com/in/muratsaygili/"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center justify-center w-10 h-10 mr-2 text-gray-500 transition-colors duration-200 transform bg-gray-100 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-800 dark:text-gray-100"
+            className="flex items-center justify-center w-10 h-10 mr-2 text-gray-500 transition-colors duration-200 transform bg-gray-100 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-600 dark:text-gray-100"
           >
             <FaLinkedin />
           </a>
@@ -41,7 +41,7 @@ export default function LeftSide() {
             href="https://github.com/muratsaygili"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center justify-center w-10 h-10 mr-2 text-gray-500 transition-colors duration-200 transform bg-gray-100 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-800 dark:text-gray-100"
+            className="flex items-center justify-center w-10 h-10 mr-2 text-gray-500 transition-colors duration-200 transform bg-gray-100 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 dark:bg-gray-600 dark:text-gray-100"
           >
             <FaGithub />
           </a>

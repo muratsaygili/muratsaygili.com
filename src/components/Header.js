@@ -11,7 +11,7 @@ export default function Header() {
   function renderLanguageChangeButtons() {
     return Object.keys(languages).map((item, index) => (
       <button
-      className="m-1 bg-yellow-600 text-yellow-100 px-2 py-1 font-bold disabled:bg-gray-400 disabled:text-gray-500 rounded inline-flex items-center"
+      className="m-1 bg-yellow-600 hover:bg-yellow-700 hover:text-yellow-100 text-yellow-100 px-2 py-1 font-bold disabled:cursor-not-allowed disabled:bg-gray-400 disabled:text-gray-600 disabled:hover:text-yellow-700 rounded inline-flex items-center"
         key={index}
         disabled={i18n.language === item}
         onClick={async () => {
