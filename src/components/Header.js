@@ -1,11 +1,33 @@
-import { BriefcaseIcon, MapPinIcon } from "@heroicons/react/20/solid";
+import { BriefcaseIcon, MapPinIcon,FlagIcon } from "@heroicons/react/20/solid";
 import Switcher from "./Switcher";
+import { useTranslation } from "react-i18next";
+import languages from "translations";
 
 export default function Header() {
+  
+  // useTranslation hook'u kullan
+  const { t, i18n } = useTranslation();
+
+  function renderLanguageChangeButtons() {
+    return Object.keys(languages).map((item, index) => (
+      <button
+      className="m-1 bg-yellow-600 text-yellow-100 px-2 py-1 font-bold disabled:bg-gray-400 disabled:text-gray-500 rounded inline-flex items-center"
+        key={index}
+        disabled={i18n.language === item}
+        onClick={async () => {
+          await i18n.changeLanguage(item);
+          localStorage.setItem("language", item);
+        }}
+      >
+        {item}
+      </button>
+    ));
+  }
+
   return (
     <div className="lg:flex lg:items-center lg:justify-between">
       <div className="min-w-0 flex-1">
-        <div className="mt-1 flex flex-row sm:mt-0 sm:flex-row sm:flex-wrap sm:space-x-2">
+        <div className="mt-1 sm:mt-0 flex flex-row sm:flex-row sm:flex-wrap sm:space-x-2">
           
           <div className="mt-2 flex items-center text-sm text-gray-500">
             <Switcher
@@ -26,6 +48,9 @@ export default function Header() {
               aria-hidden="true"
             />
             Remote
+          </div>
+          <div className="mt-2 flex items-center text-sm text-gray-500 float-right">
+            {renderLanguageChangeButtons()}
           </div>
         </div>
       </div>
