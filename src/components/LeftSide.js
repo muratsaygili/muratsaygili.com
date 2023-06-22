@@ -72,7 +72,7 @@ export default function LeftSide() {
               src="https://cacm.acm.org/system/assets/0000/3432/072010_CACMpg41_An-Interview.large.jpg?1476779421&1279552189"
               alt="Edsger W. Dijkstra"
             />
-            <div class="text-base italic font-semibold text-gray-800 dark:text-gray-400">
+            <div className="text-base italic font-semibold text-gray-800 dark:text-gray-400">
               Edsger W. Dijkstra
             </div>
             {/*
