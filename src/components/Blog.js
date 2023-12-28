@@ -1,5 +1,6 @@
 import React from "react";
 import ToText from "../utils/toText";
+import GetFirstImgSrcFromPost from "../utils/getFirstImgSrcFromPost";
 
 export default function Blog({ blog, profile }) {
   const haveBlogs = () => {
@@ -13,8 +14,8 @@ export default function Blog({ blog, profile }) {
             <div className="relative">
               <a href={post.link} rel="noopener noreferrer" target="_blank">
                 <img
-                  src={post.thumbnail}
-                  alt="Resim 1"
+                  src={GetFirstImgSrcFromPost(post.content)}
+                  alt="Thumbnail Img"
                   className="h-56 w-full object-cover"
                 />
               </a>
@@ -54,9 +55,10 @@ export default function Blog({ blog, profile }) {
                 {post.pubDate}
               </a>
             </h5>
-            <p className="card-text">{`${ToText(
-              post.description.substring(0, 280)
-            )}...`}</p>
+            <p className="card-text">
+              {`${ToText(post.description.substring(0, 280))}...`} 
+
+            </p>
           </div>
         </div>
       ));
