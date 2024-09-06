@@ -35,19 +35,19 @@ export default function Header() {
               aria-hidden="true"
             />
           </div>
-          <div className="mt-2 flex items-center text-sm text-gray-500">
+          <div className="mt-2 flex items-center text-sm font-bold text-gray-600">
             <BriefcaseIcon
               className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400"
               aria-hidden="true"
             />
             Full-time
           </div>
-          <div className="mt-2 flex items-center text-sm text-gray-500">
+          <div className="mt-2 flex items-center text-sm font-bold text-gray-600">
             <MapPinIcon
-              className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400"
+              className="mr-1.5 h-5 w-5 flex-shrink-0 text-green-400"
               aria-hidden="true"
             />
-            Remote
+            Antalya, Turkey
           </div>
           <div className="mt-2 flex items-center text-sm text-gray-500 float-right">
             {renderLanguageChangeButtons()}
