@@ -1,4 +1,4 @@
-import { BriefcaseIcon, MapPinIcon,FlagIcon } from "@heroicons/react/20/solid";
+import { BriefcaseIcon, MapPinIcon,FlagIcon } from "@heroicons/react/24/outline";
 import Switcher from "./Switcher";
 import { useTranslation } from "react-i18next";
 import languages from "translations";
